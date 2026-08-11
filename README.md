@@ -50,83 +50,85 @@ task_tracker/
 │
 ├── .gitignore
 └── README.md
-How It Works
 
-The application has two separate parts:
+### How It Works
 
-The ASP.NET Core backend provides the task management API.
-The React frontend provides the user interface.
+The application operates as a decoupled full-stack architecture where the React user interface communicates with the ASP.NET Core backend over HTTP. Because the API utilizes in-memory storage, task data persists only while the backend server remains active. 
 
-The frontend sends HTTP requests to the backend to create, retrieve, update, and delete tasks.
+### API Architecture
 
-The backend currently uses in-memory storage, so tasks are available while the API is running but are not permanently stored in a database.
+The backend API is hosted locally on http://localhost:5019. 
 
-API
+HTTP Method 
 
-The backend runs on:
+Endpoint 
 
-http://localhost:5019
+Description 
 
-Main endpoint:
+****GET****
+/api/tasksRetrieves all active tasks
+****POST****
+/api/tasksCreates a new task
+****PUT****
+/api/tasks/{id}Updates task details or status by ID
+****DELETE****
+/api/tasks/{id}Deletes a specific task by ID
 
-GET    /api/tasks
-POST   /api/tasks
-PUT    /api/tasks/{id}
-DELETE /api/tasks/{id}
-Running the Project
-1. Start the Backend
+### Running the Project
 
-Open a terminal:
+Follow these steps to launch both the backend API and frontend UI. 
+
+### 1. Start the Backend
+
+Open a terminal window and run the following commands: 
+
+bash
 
 cd ~/task_tracker/tasktracker_backend
 dotnet run
 
-The API should be available at:
+Use code with caution.
 
-http://localhost:5019
+* **API URL:** http://localhost:5019
+* **Quick Test:** Verify the API is running by executing curl http://localhost:5019/api/tasks in a separate terminal.
 
-You can test it with:
+### 2. Start the Frontend
 
-curl http://localhost:5019/api/tasks
-2. Start the Frontend
+Open a second terminal window and run the following commands: 
 
-Open a second terminal:
+bash
 
 cd ~/task_tracker/tasktracker_frontend
 npm install
 npm run dev
 
-Vite will provide a local development URL, usually:
+Use code with caution.
 
-http://localhost:5173
+* **UI URL:** http://localhost:5173 (or the local address provided by Vite).
+* **Action:** Open this address in your web browser to interact with the application.
 
-Open that address in your browser.
+⚠️ **Note:** Both servers must run concurrently for the application to function properly. 
 
-Both the backend and frontend need to be running for the application to work correctly.
+### Task Statuses
 
-Task Statuses
+Each task cycles through the following workflow states: 
 
-Tasks can have one of the following statuses:
+* Not started
+* In Progress
+* Done
 
-Not started
-In Progress
-Done
-Blocked
-Notes
+### Implementation Notes
 
-This project was built as a full-stack task management exercise, with the main focus on communication between a React frontend and a .NET REST API.
+This project serves as a full-stack task management exercise focusing on cross-origin communication between React and a .NET REST API. 
 
-The application currently uses in-memory persistence rather than a database. Restarting the backend will reset the task data.
+* **Persistence:** Uses in-memory storage instead of a persistent database.
+* **Data Lifecycle:** Restarting the backend service completely resets the task list back to its default state.
 
-Future Improvements
+### Future Improvements
 
-Possible future improvements include:
-
-Persistent database storage
-Authentication and user accounts
-Due dates and task priorities
-Pagination
-Automated tests
-Production deployment
-Improved API error handling
-
+* **Persistent Storage:** Integrate Entity Framework Core with an SQLite or PostgreSQL database.
+* **Security:** Implement user authentication and authorized route access.
+* **Metadata:** Add task due dates, priority tags, and categorization.
+* **Optimization:** Implement server-side pagination and task filtering.
+* **Quality Assurance:** Write automated unit tests for the API controllers and React components.
+* **DevOps:** Configure production deployment pipelines and enhanced API error handling middlewares.
