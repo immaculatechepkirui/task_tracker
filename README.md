@@ -29,7 +29,7 @@ The application allows users to create, view, update, search, and delete tasks. 
 - Table and card views
 - Responsive dark-themed interface
 
-### Project Structure
+## Project Structure
 
 ```text
 task_tracker/
@@ -52,11 +52,11 @@ task_tracker/
 └── README.md
 ```
 
-### How It Works
+## How It Works
 
 The application operates as a decoupled full-stack architecture where the React user interface communicates with the ASP.NET Core backend over HTTP. Because the API utilizes in-memory storage, task data persists only while the backend server remains active. 
 
-### API Architecture
+## API Architecture
 
 The backend API is hosted locally on http://localhost:5019. 
 
@@ -67,7 +67,7 @@ The backend API is hosted locally on http://localhost:5019. 
 | `PUT` | `/api/tasks/{id}` | Updates a task's details or status |
 | `DELETE` | `/api/tasks/{id}` | Deletes a task by ID |
 
-### Running the Project
+## Running the Project
 
 Clone the repository and move into the project directory:
 
@@ -117,7 +117,7 @@ http://localhost:5173
 
 ⚠️ **Note:** Both servers must run concurrently for the application to function properly. 
 
-### Task Statuses
+## Task Statuses
 
 Each task cycles through the following workflow states: 
 
@@ -125,14 +125,14 @@ Each task cycles through the following workflow states: 
 * In Progress
 * Done
 
-### Implementation Notes
+## Implementation Notes
 
 This project serves as a full-stack task management exercise focusing on cross-origin communication between React and a .NET REST API. 
 
 * **Persistence:** Uses in-memory storage instead of a persistent database.
 * **Data Lifecycle:** Restarting the backend service completely resets the task list back to its default state.
 
-### Future Improvements
+## Future Improvements
 
 * **Persistent Storage:** Integrate Entity Framework Core with an SQLite or PostgreSQL database.
 * **Security:** Implement user authentication and authorized route access.
