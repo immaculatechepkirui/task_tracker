@@ -1,0 +1,6 @@
+@tasktracker_backend_HostAddress = http://localhost:5019
+
+GET {{tasktracker_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
