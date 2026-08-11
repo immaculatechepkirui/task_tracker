@@ -86,9 +86,9 @@ In the first terminal:
 
 ```text
 cd tasktracker_backend
-```
 
 dotnet run
+```
 
 The API will run at:
 
