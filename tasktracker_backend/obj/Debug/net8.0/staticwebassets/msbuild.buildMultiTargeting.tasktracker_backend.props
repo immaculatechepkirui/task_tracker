@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/tasktracker_backend.props" />
-</Project>
