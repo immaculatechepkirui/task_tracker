@@ -117,6 +117,25 @@ http://localhost:5173
 
 ⚠️ **Note:** Both servers must run concurrently for the application to function properly. 
 
+## Why This Stack
+
+I chose .NET/ASP.NET Core for the backend and React for the frontend to directly match
+the technologies listed in the job description, demonstrating familiarity with the
+team's actual tooling rather than defaulting to what I'm most comfortable with.
+ASP.NET Core's Minimal API style kept the backend lean and readable given the assignment's
+tight time window, while React (via Vite) allowed for fast iteration on the UI.
+
+## Assumptions & Shortcuts
+
+- **In-memory storage only** — per the brief's explicit allowance; no database was configured.
+- **No authentication** — out of scope for this assignment; not required by the brief.
+- **Status values are fixed** to Not Started / In Progress / Done rather than freely
+  editable text, to keep the workflow predictable and easy to test.
+- **Live deployment (Render + Vercel) was attempted** but is not reliably reachable at
+  time of submission due to an unresolved environment variable/build issue on the
+  frontend host. Please run the app locally using the instructions above — this has
+  been tested and confirmed working end to end.
+
 ## Task Statuses
 
 Each task cycles through the following workflow states: 
