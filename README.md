@@ -33,8 +33,7 @@ The application allows users to create, view, update, search, and delete tasks. 
 
 ### Project Structure
 
-text
-
+```text
 task_tracker/
 ├── tasktracker_backend/
 │   ├── Program.cs
@@ -53,6 +52,7 @@ task_tracker/
 │
 ├── .gitignore
 └── README.md
+```
 
 ### How It Works
 
@@ -62,20 +62,12 @@ The application operates as a decoupled full-stack architecture where the React 
 
 The backend API is hosted locally on http://localhost:5019. 
 
-HTTP Method 
-
-Endpoint 
-
-Description 
-
-****GET****
-/api/tasksRetrieves all active tasks
-****POST****
-/api/tasksCreates a new task
-****PUT****
-/api/tasks/{id}Updates task details or status by ID
-****DELETE****
-/api/tasks/{id}Deletes a specific task by ID
+| HTTP Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/tasks` | Retrieves all tasks |
+| `POST` | `/api/tasks` | Creates a new task |
+| `PUT` | `/api/tasks/{id}` | Updates a task's details or status |
+| `DELETE` | `/api/tasks/{id}` | Deletes a task by ID |
 
 ### Running the Project
 
@@ -87,6 +79,8 @@ Open a terminal window and run the following commands: 
 
 bash
 
+git clone git@github.com:immaculatechepkirui/task_tracker.git
+cd task_tracker
 cd ~/task_tracker/tasktracker_backend
 dotnet run
 
@@ -99,6 +93,8 @@ Open a second terminal window and run the following commands: 
 
 bash
 
+git clone git@github.com:immaculatechepkirui/task_tracker.git
+cd task_tracker
 cd ~/task_tracker/tasktracker_frontend
 npm install
 npm run dev
