@@ -1,27 +1,21 @@
-# .NET build output
+# .NET
 **/bin/
 **/obj/
 
-# User-specific files
-*.user
-*.suo
+# Node
+**/node_modules/
+**/dist/
+**/.vite/
 
-# Visual Studio
-.vs/
-
-# Rider
-.idea/
-
-# VS Code
-.vscode/
-
-# Node dependencies
-node_modules/
-
-# React build output
-dist/
-
-# Environment files
+# Environment variables
 .env
 .env.*
 !.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
