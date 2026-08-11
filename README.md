@@ -71,36 +71,38 @@ The backend API is hosted locally on http://localhost:5019. 
 
 ### Running the Project
 
-Follow these steps to launch both the backend API and frontend UI. 
+Clone the repository and move into the project directory:
+
+git clone git@github.com:immaculatechepkirui/task_tracker.git
+cd task_tracker
 
 ### 1. Start the Backend
 
-Open a terminal window and run the following commands: 
+In the first terminal:
 
-bash
-
-git clone git@github.com:immaculatechepkirui/task_tracker.git
-cd task_tracker
-cd ~/task_tracker/tasktracker_backend
+cd tasktracker_backend
 dotnet run
 
-* **API URL:** http://localhost:5019
-* **Quick Test:** Verify the API is running by executing curl http://localhost:5019/api/tasks in a separate terminal.
+The API will run at:
+
+http://localhost:5019
+
+You can verify it is working with:
+
+curl http://localhost:5019/api/tasks
 
 ### 2. Start the Frontend
 
-Open a second terminal window and run the following commands: 
+Open a second terminal and run:
 
-bash
-
-git clone git@github.com:immaculatechepkirui/task_tracker.git
-cd task_tracker
 cd ~/task_tracker/tasktracker_frontend
 npm install
 npm run dev
 
-* **UI URL:** http://localhost:5173 (or the local address provided by Vite).
-* **Action:** Open this address in your web browser to interact with the application.
+Open the local URL provided by Vite, usually:
+
+http://localhost:5173
+
 
 ⚠️ **Note:** Both servers must run concurrently for the application to function properly. 
 
