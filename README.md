@@ -1,35 +1,33 @@
-### Task Flow
+# Task Flow
 
-A full-stack task management application built with a .NET Web API backend and a React frontend. 
+A full-stack task management application built with a .NET Web API backend and a React frontend.
 
-The application allows users to create, view, update, search, and delete tasks. The frontend communicates with the backend through HTTP requests. 
+The application allows users to create, view, update, search, and delete tasks. The frontend communicates with the backend through HTTP requests.
 
-### Tech Stack
+## Tech Stack
 
 ### Backend
-
-* .NET / ASP.NET Core Web API
-* C#
-* REST API
-* In-memory task storage
+- .NET / ASP.NET Core Web API
+- C#
+- REST API
+- In-memory task storage
 
 ### Frontend
+- React
+- Vite
+- JavaScript
+- CSS
 
-* React
-* Vite
-* JavaScript
-* CSS
+## Features
 
-### Features
-
-* Create a task with a title, description, and status
-* View all tasks
-* Search tasks
-* Update task details and status
-* Delete tasks
-* Basic validation for required task titles
-* Table and card views
-* Responsive dark-themed interface
+- Create a task with a title, description, and status
+- View all tasks
+- Search tasks
+- Update task details and status
+- Delete tasks
+- Basic validation for required task titles
+- Table and card views
+- Responsive dark-themed interface
 
 ### Project Structure
 
