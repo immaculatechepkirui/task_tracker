@@ -1,37 +1,40 @@
-# Task Tracker
+### Task Flow
 
-A full-stack task management application built with a .NET Web API backend and a React frontend.
+A full-stack task management application built with a .NET Web API backend and a React frontend. 
 
-The application allows users to create, view, update, search, and delete tasks. The frontend communicates with the backend through HTTP requests.
+The application allows users to create, view, update, search, and delete tasks. The frontend communicates with the backend through HTTP requests. 
 
-## Tech Stack
+### Tech Stack
 
 ### Backend
-- .NET / ASP.NET Core Web API
-- C#
-- REST API
-- In-memory task storage
+
+* .NET / ASP.NET Core Web API
+* C#
+* REST API
+* In-memory task storage
 
 ### Frontend
-- React
-- Vite
-- JavaScript
-- CSS
 
-## Features
+* React
+* Vite
+* JavaScript
+* CSS
 
-- Create a task with a title, description, and status
-- View all tasks
-- Search tasks
-- Update task details and status
-- Delete tasks
-- Basic validation for required task titles
-- Table and card views
-- Responsive dark-themed interface
+### Features
 
-## Project Structure
+* Create a task with a title, description, and status
+* View all tasks
+* Search tasks
+* Update task details and status
+* Delete tasks
+* Basic validation for required task titles
+* Table and card views
+* Responsive dark-themed interface
 
-```text
+### Project Structure
+
+text
+
 task_tracker/
 ├── tasktracker_backend/
 │   ├── Program.cs
@@ -87,8 +90,6 @@ bash
 cd ~/task_tracker/tasktracker_backend
 dotnet run
 
-Use code with caution.
-
 * **API URL:** http://localhost:5019
 * **Quick Test:** Verify the API is running by executing curl http://localhost:5019/api/tasks in a separate terminal.
 
@@ -101,8 +102,6 @@ bash
 cd ~/task_tracker/tasktracker_frontend
 npm install
 npm run dev
-
-Use code with caution.
 
 * **UI URL:** http://localhost:5173 (or the local address provided by Vite).
 * **Action:** Open this address in your web browser to interact with the application.
