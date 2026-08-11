@@ -74,6 +74,7 @@ The backend API is hosted locally on http://localhost:5019. 
 Clone the repository and move into the project directory:
 
 git clone git@github.com:immaculatechepkirui/task_tracker.git
+
 cd task_tracker
 
 ### 1. Start the Backend
@@ -81,6 +82,7 @@ cd task_tracker
 In the first terminal:
 
 cd tasktracker_backend
+
 dotnet run
 
 The API will run at:
@@ -96,7 +98,9 @@ curl http://localhost:5019/api/tasks
 Open a second terminal and run:
 
 cd ~/task_tracker/tasktracker_frontend
+
 npm install
+
 npm run dev
 
 Open the local URL provided by Vite, usually:
